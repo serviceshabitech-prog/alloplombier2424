@@ -83,11 +83,11 @@ body {
 
     <!-- TELEPHONE -->
     <div class="phone">
-        📞 07 00 00 00 00
+        📞 07 56 83 36 56
     </div>
 
     <!-- BOUTON -->
-    <a href="tel:0700000000" class="call-btn">
+    <a href="tel:0756833656" class="call-btn">
         Appeler maintenant
     </a>
 
@@ -95,3 +95,17 @@ body {
 
 </body>
 </html>
+🔥 Résultat
+Ton numéro 07 56 83 36 56 est visible
+Le bouton appelle directement 📞
+Design propre et pro
+🚀 Tu veux améliorer encore ?
+
+Je peux te rajouter :
+
+⭐ bouton WhatsApp direct
+⭐ formulaire client
+⭐ carte Google
+⭐ site complet prêt à gagner des clients
+
+Dis-moi 👍
