@@ -8,35 +8,155 @@
 
   <meta name="description" content="Dépannage plomberie urgence 24/7 : fuite d’eau, débouchage, WC, chauffe-eau. Demande par SMS ou appel immédiat." />
   <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#c8102e" />
-
-  <meta property="og:title" content="AlloPlombier2424 - Dépannage Plomberie Urgence 24/7" />
-  <meta property="og:description" content="Fuite d’eau, débouchage, WC, chauffe-eau. Intervention rapide." />
-  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
 
   <style>
-/* ⚠️ ICI TU DOIS GARDER TON CSS ORIGINAL EXACT */
-/* (je ne le modifie pas pour ne rien casser) */
+/* === NOUVEAU DESIGN MODERNE === */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
+  color: white;
+}
+
+.navbar {
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  padding: 15px 20px;
+}
+
+.navInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navName strong {
+  font-size: 18px;
+}
+
+.navName span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.navLinks a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navCall {
+  background: #22c55e;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.9;
+}
+
+.badgeRow {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.badge {
+  background: rgba(255,255,255,0.2);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+section {
+  background: white;
+  color: #111;
+  padding: 40px 20px;
+  border-radius: 20px 20px 0 0;
+  margin-top: 20px;
+}
+
+h2 {
+  color: #1e3a8a;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1e3a8a;
+  color: white;
+}
+
+.stickyCall {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #ef4444;
+  text-align: center;
+  padding: 15px;
+}
+
+.stickyCall a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
   </style>
 </head>
 
 <body>
-<div class="stripes"></div>
 
 <div class="navbar">
   <div class="navInner">
-    <div class="navBrand">
-      <div class="navMark"></div>
-      <div class="navName">
-        <strong>AlloPlombier2424</strong>
-        <span>Dépannage plomberie • 24/24</span>
-      </div>
+    <div class="navName">
+      <strong>AlloPlombier2424</strong>
+      <span>Dépannage plomberie • 24/24</span>
     </div>
 
     <div class="navLinks">
       <a href="#services">Services</a>
       <a href="#demande">Demande</a>
-      <a href="#process">Process</a>
       <a href="#faq">FAQ</a>
       <a class="navCall" href="tel:+33756833656">📞 Appeler</a>
     </div>
@@ -44,22 +164,8 @@
 </div>
 
 <header class="hero">
-  <div class="logo">
-    <img src="alloplombier2424.png" alt="AlloPlombier2424">
-  </div>
-
-  <div class="badgeRow">
-    <div class="badge">Entreprise locale • Intervention soignée</div>
-    <div class="badge">Disponibilité étendue • 24H/7J</div>
-    <div class="badge">Intervention sur demande</div>
-  </div>
-
   <h1>Dépannage plomberie d’urgence</h1>
-
-  <p>
-    Fuite d’eau, débouchage, WC bouché, chauffe-eau…
-    Une prise en charge rapide, propre et professionnelle.
-  </p>
+  <p>Intervention rapide, propre et professionnelle 24/7</p>
 </header>
 
 <section id="services">
@@ -82,12 +188,8 @@
 
 <section id="faq">
   <h2>FAQ</h2>
-
-  <p><strong>Intervention urgente ?</strong><br>
-  Oui selon disponibilité.</p>
-
-  <p><strong>Fuite importante ?</strong><br>
-  Coupez l’eau et appelez.</p>
+  <p><strong>Intervention urgente ?</strong><br>Oui selon disponibilité.</p>
+  <p><strong>Fuite importante ?</strong><br>Coupez l’eau et appelez.</p>
 </section>
 
 <footer>
@@ -96,9 +198,7 @@
 </footer>
 
 <div class="stickyCall">
-  <a href="tel:+33756833656">
-    APPELER MAINTENANT - 07 56 83 36 56
-  </a>
+  <a href="tel:+33756833656">APPELER MAINTENANT - 07 56 83 36 56</a>
 </div>
 
 <script>
