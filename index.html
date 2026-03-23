@@ -1,28 +1,136 @@
-<div style="display:flex;justify-content:center;align-items:center;">
-<svg width="220" height="220" viewBox="0 0 200 200">
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Fond bouclier -->
-  <path d="M100 10 L170 50 L150 170 L50 170 L30 50 Z" fill="#0a2a4a"/>
+  <title>AlloPlombier2424 - Dépannage Plomberie Urgence 24/7</title>
 
-  <!-- Toit maison -->
-  <polygon points="60,50 100,20 140,50" fill="#ff6600"/>
+  <meta name="description" content="Dépannage plomberie urgence 24/7 : fuite d’eau, débouchage, WC, chauffe-eau. Demande par SMS ou appel immédiat." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#c8102e" />
 
-  <!-- Clés croisées -->
-  <rect x="60" y="80" width="80" height="10" rx="5" fill="#ccc" transform="rotate(45 100 85)"/>
-  <rect x="60" y="80" width="80" height="10" rx="5" fill="#ccc" transform="rotate(-45 100 85)"/>
+  <meta property="og:title" content="AlloPlombier2424 - Dépannage Plomberie Urgence 24/7" />
+  <meta property="og:description" content="Fuite d’eau, débouchage, WC, chauffe-eau. Intervention rapide." />
+  <meta property="og:type" content="website" />
 
-  <!-- Goutte -->
-  <path d="M100 70 C85 95, 80 110, 100 135 C120 110, 115 95, 100 70 Z" fill="#00aaff"/>
+  <style>
+  /* 👉 GARDE TON CSS EXACT ICI (inchangé) */
+  </style>
+</head>
 
-  <!-- Texte ALLO -->
-  <text x="100" y="150" text-anchor="middle" fill="white" font-size="16" font-weight="bold">
-    ALLOPLOMBIER
-  </text>
+<body>
 
-  <!-- 2424 -->
-  <text x="100" y="175" text-anchor="middle" fill="#ffcc00" font-size="22" font-weight="bold">
-    2424
-  </text>
+<div class="stripes"></div>
 
-</svg>
+<div class="navbar">
+  <div class="navInner">
+    <div class="navBrand">
+      <div class="navMark"></div>
+      <div class="navName">
+        <strong>AlloPlombier2424</strong>
+        <span>Dépannage plomberie • 24/24</span>
+      </div>
+    </div>
+
+    <div class="navLinks">
+      <a href="#services">Services</a>
+      <a href="#demande">Demande</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a class="navCall" href="tel:+33756833656">📞 Appeler</a>
+    </div>
+  </div>
 </div>
+
+<header class="hero">
+  <div class="logo">
+    <img src="alloplombier2424.png" alt="AlloPlombier2424">
+  </div>
+
+  <div class="badgeRow">
+    <div class="badge">Entreprise professionnelle • Intervention soignée</div>
+    <div class="badge">Disponibilité étendue • 24H/7J selon urgence</div>
+    <div class="badge">Intervention sur demande • France</div>
+  </div>
+
+  <h1>Dépannage plomberie d’urgence 24/7</h1>
+
+  <p>
+    Fuite d’eau, débouchage, WC bouché, chauffe-eau…
+    Une prise en charge rapide, claire et efficace pour tous vos problèmes de plomberie.
+  </p>
+</header>
+
+<section id="services">
+  <h2>Nos services</h2>
+  <p>
+    Réparation de fuite, débouchage, chauffe-eau, robinetterie,
+    entretien et dépannage plomberie.
+  </p>
+</section>
+
+<section id="demande">
+  <h2>Envoyer votre demande</h2>
+
+  <form id="smsForm">
+    <input type="text" name="nom" placeholder="Nom / Prénom" required>
+    <input type="tel" name="tel" placeholder="Téléphone" required>
+    <input type="text" name="ville" placeholder="Ville" required>
+
+    <textarea name="message" placeholder="Décrivez votre problème"></textarea>
+
+    <button type="submit">📩 ENVOYER VOTRE DEMANDE</button>
+  </form>
+</section>
+
+<section id="process">
+  <h2>Notre méthode</h2>
+  <p>
+    Analyse rapide, intervention propre, et conseils pour éviter les récidives.
+  </p>
+</section>
+
+<section id="faq">
+  <h2>FAQ</h2>
+
+  <p><strong>Intervenez-vous en urgence ?</strong><br>
+  Oui, selon disponibilité et urgence.</p>
+
+  <p><strong>Que faire en cas de fuite ?</strong><br>
+  Coupez l’eau et contactez-nous immédiatement.</p>
+</section>
+
+<footer>
+  <div>🕘 Disponibilité : 24H/7J</div>
+  <div>📍 Zone : Intervention sur demande</div>
+  <div>📞 07 56 83 36 56</div>
+</footer>
+
+<div class="stickyCall">
+  <a href="tel:+33756833656">
+    APPELER MAINTENANT - 07 56 83 36 56
+  </a>
+</div>
+
+<script>
+const PHONE = "0756833656";
+
+document.getElementById("smsForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const data = new FormData(this);
+
+  const msg = encodeURIComponent(
+    "Demande dépannage plomberie (AlloPlombier2424)\n" +
+    "Nom: " + data.get("nom") + "\n" +
+    "Tel: " + data.get("tel") + "\n" +
+    "Ville: " + data.get("ville") + "\n" +
+    "Message: " + data.get("message")
+  );
+
+  window.location.href = "sms:" + PHONE + "?body=" + msg;
+});
+</script>
+
+</body>
+</html>
