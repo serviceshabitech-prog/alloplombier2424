@@ -1,13 +1,11 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>AlloPlombier2424 - Dépannage Plomberie Urgence 24/7</title>
-  <meta name="description" content="Dépannage plomberie urgence 24/7 : fuite d’eau, débouchage, WC, chauffe-eau. Intervention rapide et professionnelle." />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlloPlombier2424 - Dépannage plomberie 24h/24 7j/7</title>
+  <meta name="description" content="Dépannage plomberie en urgence 24h/24 et 7j/7. Fuite d’eau, débouchage, chauffe-eau, robinetterie. Intervention rapide et professionnelle.">
+  <meta name="theme-color" content="#16233f">
 
   <style>
     * {
@@ -20,10 +18,9 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
-      line-height: 1.5;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
     }
 
     a {
@@ -31,12 +28,12 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
+      max-width: 100%;
     }
 
     .container {
-      width: min(1100px, calc(100% - 32px));
+      width: min(1150px, calc(100% - 28px));
       margin: 0 auto;
     }
 
@@ -45,45 +42,54 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(15, 23, 42, 0.92);
+      background: rgba(22, 35, 63, 0.94);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
     }
 
     .navInner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
       padding: 14px 0;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
-      color: white;
+      gap: 14px;
+      min-width: 0;
     }
 
-    .brand img {
-      width: 58px;
-      height: 58px;
+    .brandLogo {
+      width: 78px;
+      height: 78px;
       object-fit: contain;
-      border-radius: 12px;
-      background: white;
-      padding: 4px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 8px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.26);
+      flex-shrink: 0;
+    }
+
+    .brandText {
+      min-width: 0;
     }
 
     .brandText strong {
       display: block;
-      font-size: 18px;
+      font-size: 20px;
+      color: #ffffff;
       line-height: 1.1;
     }
 
     .brandText span {
+      display: block;
+      margin-top: 6px;
       font-size: 12px;
-      opacity: 0.8;
+      color: rgba(255,255,255,0.8);
     }
 
     .navLinks {
@@ -91,20 +97,27 @@
       align-items: center;
       gap: 16px;
       flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .navLinks a {
-      color: white;
+      color: #ffffff;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 15px;
     }
 
-    .navBtn {
+    .callBtn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 16px;
+      color: #ffffff;
+      font-weight: 800;
       background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: white;
-      padding: 11px 16px;
-      border-radius: 10px;
-      box-shadow: 0 10px 24px rgba(34, 197, 94, 0.25);
+      box-shadow: 0 16px 35px rgba(34,197,94,0.28);
+      white-space: nowrap;
     }
 
     /* HERO */
@@ -112,17 +125,16 @@
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(135deg, rgba(14, 165, 233, 0.92), rgba(30, 58, 138, 0.95)),
-        url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1400&q=80') center/cover;
-      color: white;
-      padding: 72px 0 90px;
+        linear-gradient(135deg, rgba(14,165,233,0.88), rgba(30,58,138,0.92)),
+        url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      padding: 42px 0 80px;
     }
 
-    .hero::after {
+    .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at top right, rgba(255,255,255,0.12), transparent 35%);
+      background: radial-gradient(circle at top center, rgba(255,255,255,0.14), transparent 38%);
       pointer-events: none;
     }
 
@@ -132,112 +144,119 @@
       text-align: center;
     }
 
-    .heroLogoWrap {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 22px;
+    .logoCard {
+      width: min(760px, 100%);
+      margin: 36px auto 26px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 34px;
+      padding: 28px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.26);
+      backdrop-filter: blur(10px);
     }
 
-    .heroLogo {
-      width: min(520px, 92%);
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 22px;
-      padding: 16px;
-      box-shadow: 0 22px 50px rgba(0,0,0,0.28);
+    .logoCard img {
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+      object-fit: contain;
+      filter: drop-shadow(0 16px 34px rgba(0,0,0,0.35));
     }
 
     .badgeRow {
       display: flex;
       justify-content: center;
-      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
+      gap: 14px;
+      margin: 18px 0 26px;
     }
 
     .badge {
-      background: rgba(255,255,255,0.14);
-      border: 1px solid rgba(255,255,255,0.16);
-      color: white;
-      padding: 8px 12px;
+      background: rgba(255,255,255,0.16);
+      color: #ffffff;
+      padding: 12px 18px;
       border-radius: 999px;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
       backdrop-filter: blur(8px);
     }
 
     .hero h1 {
-      margin: 0 0 12px;
-      font-size: clamp(32px, 5vw, 56px);
-      line-height: 1.05;
+      margin: 0;
+      font-size: clamp(38px, 5vw, 72px);
+      line-height: 1.04;
+      text-shadow: 0 10px 25px rgba(0,0,0,0.22);
     }
 
     .hero p {
-      max-width: 740px;
-      margin: 0 auto 28px;
-      font-size: 18px;
-      opacity: 0.95;
+      width: min(850px, 100%);
+      margin: 18px auto 0;
+      font-size: 21px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.94);
     }
 
     .heroActions {
       display: flex;
       justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
     }
 
-    .btnPrimary,
-    .btnSecondary {
-      display: inline-block;
-      padding: 15px 22px;
-      border-radius: 14px;
-      font-weight: 700;
-      font-size: 16px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+    .primaryBtn,
+    .secondaryBtn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      padding: 16px 24px;
+      border-radius: 16px;
+      font-weight: 800;
+      font-size: 17px;
     }
 
-    .btnPrimary:hover,
-    .btnSecondary:hover,
-    .navBtn:hover,
-    button:hover {
-      transform: translateY(-2px);
-      opacity: 0.96;
-    }
-
-    .btnPrimary {
+    .primaryBtn {
+      color: #ffffff;
       background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: white;
-      box-shadow: 0 15px 30px rgba(22, 163, 74, 0.28);
+      box-shadow: 0 18px 35px rgba(34,197,94,0.26);
     }
 
-    .btnSecondary {
-      color: white;
+    .secondaryBtn {
+      color: #ffffff;
       border: 1px solid rgba(255,255,255,0.3);
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.1);
       backdrop-filter: blur(8px);
     }
 
-    /* MAIN SECTIONS */
+    /* SECTIONS */
     .section {
-      padding: 70px 0;
+      padding: 72px 0;
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    .sectionAlt {
+      background: #eef6ff;
     }
 
     .sectionTitle {
       text-align: center;
-      margin-bottom: 38px;
+      margin-bottom: 34px;
     }
 
     .sectionTitle h2 {
       margin: 0 0 10px;
-      font-size: 34px;
+      font-size: 36px;
       color: #0f172a;
     }
 
     .sectionTitle p {
       margin: 0;
       color: #475569;
-      font-size: 16px;
+      font-size: 17px;
     }
 
     /* SERVICES */
@@ -248,46 +267,40 @@
     }
 
     .card {
-      background: white;
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      background: #ffffff;
       border: 1px solid #e2e8f0;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 14px 34px rgba(15,23,42,0.08);
     }
 
     .cardIcon {
-      font-size: 30px;
+      font-size: 32px;
       margin-bottom: 12px;
     }
 
     .card h3 {
       margin: 0 0 10px;
-      font-size: 20px;
+      font-size: 21px;
       color: #0f172a;
     }
 
     .card p {
       margin: 0;
-      color: #475569;
       font-size: 15px;
+      line-height: 1.6;
+      color: #475569;
     }
 
-    /* TRUST BAR */
     .trustBar {
-      background: #0f172a;
-      color: white;
+      margin-top: 24px;
+      background: #16233f;
       border-radius: 24px;
       padding: 22px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
-      margin-top: 28px;
+      color: #ffffff;
     }
 
     .trustItem {
@@ -296,46 +309,46 @@
 
     .trustItem strong {
       display: block;
-      font-size: 22px;
+      font-size: 24px;
       margin-bottom: 6px;
     }
 
     .trustItem span {
       font-size: 14px;
-      opacity: 0.86;
+      color: rgba(255,255,255,0.82);
     }
 
-    /* FORM */
+    /* CONTACT */
     .contactWrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 22px;
-      align-items: stretch;
     }
 
     .contactInfo {
       background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
-      color: white;
-      border-radius: 22px;
-      padding: 28px;
-      box-shadow: 0 18px 40px rgba(14, 165, 233, 0.2);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 18px 40px rgba(14,165,233,0.18);
     }
 
     .contactInfo h3 {
       margin-top: 0;
       margin-bottom: 14px;
-      font-size: 28px;
+      font-size: 30px;
     }
 
     .contactInfo p {
-      margin-bottom: 18px;
-      opacity: 0.95;
+      margin-top: 0;
+      margin-bottom: 20px;
+      line-height: 1.6;
     }
 
     .contactInfo ul {
-      padding: 0;
-      margin: 0;
       list-style: none;
+      margin: 0;
+      padding: 0;
     }
 
     .contactInfo li {
@@ -344,11 +357,11 @@
     }
 
     .formCard {
-      background: white;
-      border-radius: 22px;
-      padding: 28px;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      background: #ffffff;
       border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 14px 34px rgba(15,23,42,0.08);
     }
 
     form {
@@ -356,37 +369,40 @@
       gap: 14px;
     }
 
-    input, textarea {
+    input,
+    textarea {
       width: 100%;
-      padding: 14px 15px;
-      border-radius: 12px;
       border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 15px 16px;
       font-size: 15px;
+      font-family: inherit;
       outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    input:focus, textarea:focus {
-      border-color: #0ea5e9;
-      box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.12);
+      background: #ffffff;
+      color: #0f172a;
     }
 
     textarea {
-      min-height: 130px;
+      min-height: 140px;
       resize: vertical;
     }
 
+    input:focus,
+    textarea:focus {
+      border-color: #0ea5e9;
+      box-shadow: 0 0 0 4px rgba(14,165,233,0.12);
+    }
+
     button {
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      color: white;
-      padding: 15px 18px;
       border: none;
-      border-radius: 14px;
+      border-radius: 16px;
+      padding: 16px 18px;
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 800;
       cursor: pointer;
-      box-shadow: 0 14px 30px rgba(34, 197, 94, 0.22);
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      color: #ffffff;
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      box-shadow: 0 16px 32px rgba(34,197,94,0.22);
     }
 
     /* FAQ */
@@ -397,31 +413,30 @@
     }
 
     .faqItem {
-      background: white;
-      border-radius: 18px;
-      padding: 22px;
+      background: #ffffff;
       border: 1px solid #e2e8f0;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(15,23,42,0.06);
     }
 
     .faqItem h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 18px;
+      margin: 0 0 10px;
+      font-size: 19px;
       color: #0f172a;
     }
 
     .faqItem p {
       margin: 0;
       color: #475569;
+      line-height: 1.6;
     }
 
     /* FOOTER */
     footer {
-      background: #0f172a;
-      color: white;
-      padding: 30px 0 100px;
-      margin-top: 30px;
+      background: #16233f;
+      color: #ffffff;
+      padding: 34px 0 110px;
     }
 
     .footerInner {
@@ -433,38 +448,38 @@
     }
 
     .footerInner strong {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .footerInner p {
-      margin: 6px 0 0;
-      opacity: 0.85;
+      margin: 8px 0 0;
+      color: rgba(255,255,255,0.82);
     }
 
     /* STICKY CALL */
     .stickyCall {
       position: fixed;
       left: 50%;
-      bottom: 16px;
+      bottom: 14px;
       transform: translateX(-50%);
-      width: min(700px, calc(100% - 20px));
-      z-index: 1100;
+      width: min(760px, calc(100% - 22px));
+      z-index: 1200;
     }
 
     .stickyCall a {
       display: block;
       text-align: center;
-      background: linear-gradient(135deg, #ef4444, #dc2626);
-      color: white;
-      padding: 16px 18px;
-      border-radius: 16px;
-      font-weight: 800;
-      box-shadow: 0 18px 40px rgba(220, 38, 38, 0.32);
+      color: #ffffff;
       font-size: 17px;
+      font-weight: 900;
+      padding: 18px 22px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #ff3b3b, #ef4444);
+      box-shadow: 0 20px 45px rgba(239,68,68,0.35);
     }
 
     /* RESPONSIVE */
-    @media (max-width: 980px) {
+    @media (max-width: 1024px) {
       .servicesGrid,
       .trustBar,
       .contactWrap,
@@ -474,14 +489,46 @@
     }
 
     @media (max-width: 760px) {
+      .container {
+        width: min(100%, calc(100% - 20px));
+      }
+
       .navInner {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
       }
 
       .navLinks {
-        width: 100%;
-        gap: 12px;
+        justify-content: flex-start;
+        gap: 14px;
+      }
+
+      .brandLogo {
+        width: 68px;
+        height: 68px;
+      }
+
+      .hero {
+        padding: 24px 0 64px;
+      }
+
+      .logoCard {
+        margin-top: 18px;
+        border-radius: 28px;
+        padding: 18px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .badge {
+        font-size: 14px;
+        padding: 10px 15px;
       }
 
       .servicesGrid,
@@ -491,40 +538,27 @@
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding: 56px 0 80px;
-      }
-
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
       .section {
         padding: 56px 0;
       }
 
       .sectionTitle h2 {
-        font-size: 28px;
+        font-size: 30px;
       }
 
-      .footerInner {
-        flex-direction: column;
-        align-items: flex-start;
+      .stickyCall a {
+        font-size: 16px;
+        padding: 17px 16px;
       }
     }
   </style>
 </head>
-
 <body>
 
   <div class="navbar">
     <div class="container navInner">
       <div class="brand">
-        <img src="logo.jpg" alt="Logo AlloPlombier2424">
+        <img src="logo.jpeg" alt="Logo AlloPlombier2424" class="brandLogo">
         <div class="brandText">
           <strong>AlloPlombier2424</strong>
           <span>Dépannage plomberie • 24h/24 • 7j/7</span>
@@ -535,15 +569,15 @@
         <a href="#services">Services</a>
         <a href="#demande">Demande</a>
         <a href="#faq">FAQ</a>
-        <a class="navBtn" href="tel:+33756833656">📞 Appeler maintenant</a>
+        <a href="tel:+33756833656" class="callBtn">📞 Appeler maintenant</a>
       </div>
     </div>
   </div>
 
   <header class="hero">
     <div class="container heroInner">
-      <div class="heroLogoWrap">
-        <img src="logo.jpg" alt="Logo AlloPlombier2424" class="heroLogo">
+      <div class="logoCard">
+        <img src="logo.jpeg" alt="Logo AlloPlombier2424">
       </div>
 
       <div class="badgeRow">
@@ -552,15 +586,16 @@
         <div class="badge">✅ Dépannage urgent</div>
       </div>
 
-      <h1>Dépannage plomberie d’urgence<br>rapide, propre et professionnel</h1>
+      <h1>Dépannage plomberie<br>rapide, propre et professionnel</h1>
+
       <p>
         Fuite d’eau, débouchage, WC bouché, chauffe-eau, robinetterie :
         nous intervenons rapidement pour vos urgences plomberie.
       </p>
 
       <div class="heroActions">
-        <a href="#demande" class="btnPrimary">⚡ Prendre rendez-vous</a>
-        <a href="tel:+33756833656" class="btnSecondary">📞 07 56 83 36 56</a>
+        <a href="#demande" class="primaryBtn">⚡ Prendre rendez-vous</a>
+        <a href="tel:+33756833656" class="secondaryBtn">📞 07 56 83 36 56</a>
       </div>
     </div>
   </header>
@@ -569,32 +604,32 @@
     <div class="container">
       <div class="sectionTitle">
         <h2>Nos services</h2>
-        <p>Des prestations rapides et efficaces pour tous vos problèmes de plomberie.</p>
+        <p>Des interventions rapides et efficaces pour tous vos problèmes de plomberie.</p>
       </div>
 
       <div class="servicesGrid">
         <div class="card">
           <div class="cardIcon">💧</div>
           <h3>Recherche de fuite</h3>
-          <p>Détection et réparation rapide des fuites d’eau visibles ou cachées.</p>
+          <p>Détection et réparation rapide des fuites d’eau visibles ou cachées dans votre logement.</p>
         </div>
 
         <div class="card">
           <div class="cardIcon">🚽</div>
           <h3>Débouchage</h3>
-          <p>WC, évier, lavabo, douche ou canalisation bouchée, intervention rapide.</p>
+          <p>WC, évier, lavabo, douche ou canalisation bouchée : intervention rapide et propre.</p>
         </div>
 
         <div class="card">
           <div class="cardIcon">🔥</div>
           <h3>Chauffe-eau</h3>
-          <p>Diagnostic, dépannage et remplacement de chauffe-eau en urgence.</p>
+          <p>Diagnostic, dépannage et remplacement de chauffe-eau en cas de panne ou d’urgence.</p>
         </div>
 
         <div class="card">
           <div class="cardIcon">🔧</div>
           <h3>Robinetterie</h3>
-          <p>Réparation ou remplacement de robinets, mélangeurs et flexibles.</p>
+          <p>Réparation ou remplacement de robinets, mélangeurs, flexibles et équipements défectueux.</p>
         </div>
       </div>
 
@@ -613,24 +648,24 @@
         </div>
         <div class="trustItem">
           <strong>Pro</strong>
-          <span>Travail propre et sérieux</span>
+          <span>Travail sérieux et propre</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="demande" style="background:#eef6ff;">
+  <section class="section sectionAlt" id="demande">
     <div class="container">
       <div class="sectionTitle">
         <h2>Réserver une intervention rapide</h2>
-        <p>Remplis le formulaire et envoie ta demande immédiatement par SMS.</p>
+        <p>Remplissez le formulaire et envoyez votre demande directement par SMS.</p>
       </div>
 
       <div class="contactWrap">
         <div class="contactInfo">
           <h3>Une urgence plomberie ?</h3>
           <p>
-            Nous répondons rapidement pour les demandes urgentes :
+            Nous répondons rapidement pour les urgences plomberie :
             fuite d’eau, débouchage, chauffe-eau, WC bouché, robinetterie.
           </p>
 
@@ -638,7 +673,7 @@
             <li>📞 Téléphone : 07 56 83 36 56</li>
             <li>🕘 Disponibilité : 24h/24 - 7j/7</li>
             <li>⚡ Demande rapide par SMS</li>
-            <li>✅ Intervention sérieuse et propre</li>
+            <li>✅ Intervention sérieuse et professionnelle</li>
           </ul>
         </div>
 
@@ -709,6 +744,7 @@
 
     document.getElementById("smsForm").addEventListener("submit", function(e) {
       e.preventDefault();
+
       const data = new FormData(this);
 
       const msg = encodeURIComponent(
