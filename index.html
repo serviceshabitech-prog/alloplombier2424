@@ -17,7 +17,7 @@
       --navy: #16233f;
       --navy-2: #1d3159;
       --blue: #0ea5e9;
-      --blue-dark: #1d4ed8;
+      --blue-dark: #1e3a8a;
       --green: #22c55e;
       --green-dark: #16a34a;
       --red: #ef4444;
@@ -68,7 +68,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(11, 18, 32, 0.86);
+      background: rgba(11, 18, 32, 0.88);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       box-shadow: 0 12px 30px rgba(0,0,0,0.16);
@@ -89,7 +89,7 @@
     .brandTitle {
       margin: 0;
       font-family: 'Playfair Display', serif;
-      font-size: 31px;
+      font-size: 32px;
       font-weight: 800;
       line-height: 1;
       letter-spacing: 0.4px;
@@ -137,6 +137,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      gap: 8px;
       padding: 14px 22px;
       border-radius: 999px;
       color: var(--white) !important;
@@ -150,10 +151,10 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 54px 0 92px;
       background:
         linear-gradient(135deg, rgba(8, 47, 73, 0.72), rgba(30, 58, 138, 0.82)),
         url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      padding: 54px 0 92px;
     }
 
     .hero::before {
@@ -318,7 +319,7 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.94);
+      background: rgba(255,255,255,0.96);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
       padding: 26px;
@@ -446,7 +447,7 @@
     }
 
     .formCard {
-      background: rgba(255,255,255,0.96);
+      background: rgba(255,255,255,0.97);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
       padding: 30px;
@@ -510,7 +511,7 @@
     }
 
     .faqItem {
-      background: rgba(255,255,255,0.96);
+      background: rgba(255,255,255,0.97);
       border: 1px solid var(--border);
       border-radius: 22px;
       padding: 24px;
@@ -814,6 +815,7 @@
 
         <div class="formCard">
           <h3 class="formTitle">Envoyer votre demande</h3>
+
           <form id="smsForm">
             <input type="text" name="nom" placeholder="Nom / Prénom" required>
             <input type="tel" name="tel" placeholder="Téléphone" required>
@@ -860,7 +862,7 @@
   <footer>
     <div class="container footerInner">
       <div class="footerLeft">
-        <img src="logo.PNG" alt="Logo AlloPlombier2424" class="footerLogo">
+        <img src="logo.png" alt="Logo AlloPlombier2424" class="footerLogo">
 
         <div class="footerText">
           <strong>AlloPlombier2424</strong>
