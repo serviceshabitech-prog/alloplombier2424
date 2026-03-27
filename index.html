@@ -3,22 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT MODERNE -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
   <title>AlloPlombier2424 - Dépannage plomberie 24h/24 7j/7</title>
-  <meta name="description" content="Dépannage plomberie en urgence 24h/24 et 7j/7. Fuite d’eau, débouchage, chauffe-eau, robinetterie. Intervention rapide et professionnelle.">
-  <meta name="theme-color" content="#16233f">
 
   <style>
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: #0f172a;
       color: #ffffff;
     }
@@ -27,14 +25,9 @@
       text-decoration: none;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
     .container {
       width: min(1150px, calc(100% - 28px));
-      margin: 0 auto;
+      margin: auto;
     }
 
     /* NAVBAR */
@@ -42,198 +35,89 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(22, 35, 63, 0.94);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+      background: #16233f;
+      padding: 18px 0;
     }
 
     .navInner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 18px;
-      padding: 14px 0;
-    }
-
-    .brand {
-      display: flex;
       align-items: center;
-      gap: 14px;
-      min-width: 0;
-    }
-
-    .brandLogo {
-      width: 78px;
-      height: 78px;
-      object-fit: contain;
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 8px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.26);
-      flex-shrink: 0;
+      gap: 20px;
     }
 
     .brandText {
-      min-width: 0;
-    }
-
-    .brandText strong {
-      display: block;
-      font-size: 20px;
-      color: #ffffff;
-      line-height: 1.1;
-    }
-
-    .brandText span {
-      display: block;
-      margin-top: 6px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.8);
+      font-size: 28px;
+      font-weight: 800;
+      background: linear-gradient(90deg, #22c55e, #0ea5e9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
     }
 
     .navLinks {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
       flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     .navLinks a {
       color: #ffffff;
-      font-weight: 700;
-      font-size: 15px;
+      font-weight: 600;
     }
 
     .callBtn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 22px;
-      border-radius: 16px;
-      color: #ffffff;
-      font-weight: 800;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      box-shadow: 0 16px 35px rgba(34,197,94,0.28);
-      white-space: nowrap;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: #22c55e;
+      font-weight: 700;
+      color: #fff;
     }
 
     /* HERO */
     .hero {
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(135deg, rgba(14,165,233,0.88), rgba(30,58,138,0.92)),
-        url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      padding: 42px 0 80px;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top center, rgba(255,255,255,0.14), transparent 38%);
-      pointer-events: none;
-    }
-
-    .heroInner {
-      position: relative;
-      z-index: 1;
       text-align: center;
-    }
-
-    .logoCard {
-      width: min(760px, 100%);
-      margin: 36px auto 26px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 34px;
-      padding: 28px;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.26);
-      backdrop-filter: blur(10px);
-    }
-
-    .logoCard img {
-      width: 100%;
-      max-width: 620px;
-      margin: 0 auto;
-      object-fit: contain;
-      filter: drop-shadow(0 16px 34px rgba(0,0,0,0.35));
-    }
-
-    .badgeRow {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin: 18px 0 26px;
-    }
-
-    .badge {
-      background: rgba(255,255,255,0.16);
-      color: #ffffff;
-      padding: 12px 18px;
-      border-radius: 999px;
-      font-size: 15px;
-      font-weight: 700;
-      border: 1px solid rgba(255,255,255,0.14);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
-      backdrop-filter: blur(8px);
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
     }
 
     .hero h1 {
+      font-size: 52px;
       margin: 0;
-      font-size: clamp(38px, 5vw, 72px);
-      line-height: 1.04;
-      text-shadow: 0 10px 25px rgba(0,0,0,0.22);
     }
 
     .hero p {
-      width: min(850px, 100%);
-      margin: 18px auto 0;
-      font-size: 21px;
-      line-height: 1.5;
-      color: rgba(255,255,255,0.94);
+      font-size: 20px;
+      margin-top: 15px;
+      opacity: 0.95;
     }
 
     .heroActions {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
-    .primaryBtn,
-    .secondaryBtn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 58px;
-      padding: 16px 24px;
-      border-radius: 16px;
-      font-weight: 800;
-      font-size: 17px;
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 700;
     }
 
-    .primaryBtn {
-      color: #ffffff;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      box-shadow: 0 18px 35px rgba(34,197,94,0.26);
+    .primary {
+      background: #22c55e;
+      color: #fff;
     }
 
-    .secondaryBtn {
-      color: #ffffff;
-      border: 1px solid rgba(255,255,255,0.3);
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(8px);
+    .secondary {
+      border: 2px solid #fff;
+      color: #fff;
     }
 
     /* SECTIONS */
     .section {
-      padding: 72px 0;
+      padding: 60px 0;
       background: #f8fafc;
       color: #0f172a;
     }
@@ -244,520 +128,279 @@
 
     .sectionTitle {
       text-align: center;
-      margin-bottom: 34px;
+      margin-bottom: 30px;
     }
 
     .sectionTitle h2 {
       margin: 0 0 10px;
-      font-size: 36px;
-      color: #0f172a;
+      font-size: 34px;
     }
 
     .sectionTitle p {
       margin: 0;
       color: #475569;
-      font-size: 17px;
     }
 
     /* SERVICES */
     .servicesGrid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
+      gap: 20px;
     }
 
     .card {
       background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 22px;
       padding: 24px;
-      box-shadow: 0 14px 34px rgba(15,23,42,0.08);
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     .cardIcon {
       font-size: 32px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .card h3 {
-      margin: 0 0 10px;
-      font-size: 21px;
-      color: #0f172a;
+      margin: 0 0 8px;
     }
 
     .card p {
       margin: 0;
-      font-size: 15px;
-      line-height: 1.6;
       color: #475569;
-    }
-
-    .trustBar {
-      margin-top: 24px;
-      background: #16233f;
-      border-radius: 24px;
-      padding: 22px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-      color: #ffffff;
-    }
-
-    .trustItem {
-      text-align: center;
-    }
-
-    .trustItem strong {
-      display: block;
-      font-size: 24px;
-      margin-bottom: 6px;
-    }
-
-    .trustItem span {
-      font-size: 14px;
-      color: rgba(255,255,255,0.82);
     }
 
     /* CONTACT */
     .contactWrap {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 22px;
+      gap: 20px;
     }
 
     .contactInfo {
       background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
-      color: #ffffff;
-      border-radius: 24px;
-      padding: 30px;
-      box-shadow: 0 18px 40px rgba(14,165,233,0.18);
-    }
-
-    .contactInfo h3 {
-      margin-top: 0;
-      margin-bottom: 14px;
-      font-size: 30px;
-    }
-
-    .contactInfo p {
-      margin-top: 0;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .contactInfo ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .contactInfo li {
-      margin-bottom: 12px;
-      font-weight: 700;
+      color: #fff;
+      padding: 25px;
+      border-radius: 18px;
     }
 
     .formCard {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 14px 34px rgba(15,23,42,0.08);
+      background: #fff;
+      padding: 25px;
+      border-radius: 18px;
     }
 
-    form {
-      display: grid;
-      gap: 14px;
-    }
-
-    input,
-    textarea {
+    input, textarea {
       width: 100%;
-      border: 1px solid #cbd5e1;
-      border-radius: 14px;
-      padding: 15px 16px;
-      font-size: 15px;
-      font-family: inherit;
-      outline: none;
-      background: #ffffff;
-      color: #0f172a;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus {
-      border-color: #0ea5e9;
-      box-shadow: 0 0 0 4px rgba(14,165,233,0.12);
+      padding: 14px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
     }
 
     button {
+      width: 100%;
+      padding: 14px;
       border: none;
-      border-radius: 16px;
-      padding: 16px 18px;
-      font-size: 16px;
-      font-weight: 800;
+      border-radius: 12px;
+      background: #22c55e;
+      color: #fff;
+      font-weight: 700;
       cursor: pointer;
-      color: #ffffff;
-      background: linear-gradient(135deg, #22c55e, #16a34a);
-      box-shadow: 0 16px 32px rgba(34,197,94,0.22);
     }
 
     /* FAQ */
     .faqGrid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      gap: 20px;
     }
 
     .faqItem {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 20px;
-      padding: 22px;
-      box-shadow: 0 12px 28px rgba(15,23,42,0.06);
-    }
-
-    .faqItem h3 {
-      margin: 0 0 10px;
-      font-size: 19px;
-      color: #0f172a;
-    }
-
-    .faqItem p {
-      margin: 0;
-      color: #475569;
-      line-height: 1.6;
+      background: #fff;
+      padding: 20px;
+      border-radius: 14px;
     }
 
     /* FOOTER */
     footer {
       background: #16233f;
-      color: #ffffff;
-      padding: 34px 0 110px;
+      text-align: center;
+      padding: 40px 20px;
     }
 
-    .footerInner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footerInner strong {
-      font-size: 20px;
-    }
-
-    .footerInner p {
-      margin: 8px 0 0;
-      color: rgba(255,255,255,0.82);
-    }
-
-    /* STICKY CALL */
+    /* CALL FIXE */
     .stickyCall {
       position: fixed;
+      bottom: 15px;
       left: 50%;
-      bottom: 14px;
       transform: translateX(-50%);
-      width: min(760px, calc(100% - 22px));
-      z-index: 1200;
+      width: 90%;
+      max-width: 500px;
     }
 
     .stickyCall a {
       display: block;
+      background: red;
       text-align: center;
-      color: #ffffff;
-      font-size: 17px;
-      font-weight: 900;
-      padding: 18px 22px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #ff3b3b, #ef4444);
-      box-shadow: 0 20px 45px rgba(239,68,68,0.35);
+      padding: 16px;
+      border-radius: 14px;
+      font-weight: 800;
+      color: #fff;
     }
 
     /* RESPONSIVE */
-    @media (max-width: 1024px) {
-      .servicesGrid,
-      .trustBar,
-      .contactWrap,
-      .faqGrid {
+    @media(max-width:900px){
+      .servicesGrid, .contactWrap, .faqGrid {
         grid-template-columns: 1fr 1fr;
       }
     }
 
-    @media (max-width: 760px) {
-      .container {
-        width: min(100%, calc(100% - 20px));
-      }
-
-      .navInner {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .navLinks {
-        justify-content: flex-start;
-        gap: 14px;
-      }
-
-      .brandLogo {
-        width: 68px;
-        height: 68px;
-      }
-
-      .hero {
-        padding: 24px 0 64px;
-      }
-
-      .logoCard {
-        margin-top: 18px;
-        border-radius: 28px;
-        padding: 18px;
+    @media(max-width:600px){
+      .servicesGrid, .contactWrap, .faqGrid {
+        grid-template-columns: 1fr;
       }
 
       .hero h1 {
         font-size: 34px;
       }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .badge {
-        font-size: 14px;
-        padding: 10px 15px;
-      }
-
-      .servicesGrid,
-      .trustBar,
-      .contactWrap,
-      .faqGrid {
-        grid-template-columns: 1fr;
-      }
-
-      .section {
-        padding: 56px 0;
-      }
-
-      .sectionTitle h2 {
-        font-size: 30px;
-      }
-
-      .stickyCall a {
-        font-size: 16px;
-        padding: 17px 16px;
-      }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="navbar">
-    <div class="container navInner">
-      <div class="brand">
-        <img src="logo.PNG" alt="Logo AlloPlombier2424" class="brandLogo">
-        <div class="brandText">
-          <strong>AlloPlombier2424</strong>
-          <span>Dépannage plomberie • 24h/24 • 7j/7</span>
-        </div>
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="container navInner">
+    <div class="brandText">AlloPlombier2424</div>
+
+    <div class="navLinks">
+      <a href="#services">Services</a>
+      <a href="#demande">Demande</a>
+      <a href="#faq">FAQ</a>
+      <a href="tel:+33756833656" class="callBtn">📞 Appeler</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Dépannage plomberie rapide</h1>
+  <p>Fuite, débouchage, chauffe-eau — intervention 24h/24</p>
+
+  <div class="heroActions">
+    <a href="tel:+33756833656" class="btn primary">📞 Appeler</a>
+    <a href="#services" class="btn secondary">Voir services</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="sectionTitle">
+      <h2>Nos services</h2>
+      <p>Intervention rapide et efficace</p>
+    </div>
+
+    <div class="servicesGrid">
+      <div class="card">
+        <div class="cardIcon">💧</div>
+        <h3>Fuite</h3>
+        <p>Réparation rapide</p>
       </div>
 
-      <div class="navLinks">
-        <a href="#services">Services</a>
-        <a href="#demande">Demande</a>
-        <a href="#faq">FAQ</a>
-        <a href="tel:+33756833656" class="callBtn">📞 Appeler maintenant</a>
+      <div class="card">
+        <div class="cardIcon">🚽</div>
+        <h3>Débouchage</h3>
+        <p>WC / évier bouché</p>
+      </div>
+
+      <div class="card">
+        <div class="cardIcon">🔥</div>
+        <h3>Chauffe-eau</h3>
+        <p>Dépannage rapide</p>
+      </div>
+
+      <div class="card">
+        <div class="cardIcon">🔧</div>
+        <h3>Réparation</h3>
+        <p>Installation & dépannage</p>
       </div>
     </div>
   </div>
+</section>
 
-  <header class="hero">
-    <div class="container heroInner">
-      <div class="logoCard">
-        <img src="logo.PNG" alt="Logo AlloPlombier2424">
+<!-- CONTACT -->
+<section class="section sectionAlt" id="demande">
+  <div class="container">
+    <div class="sectionTitle">
+      <h2>Demande rapide</h2>
+    </div>
+
+    <div class="contactWrap">
+      <div class="contactInfo">
+        <h3>Urgence plomberie ?</h3>
+        <p>Disponible 24h/24 - 7j/7</p>
+        <p>📞 07 56 83 36 56</p>
       </div>
 
-      <div class="badgeRow">
-        <div class="badge">✅ Intervention rapide</div>
-        <div class="badge">✅ Disponible 24/7</div>
-        <div class="badge">✅ Dépannage urgent</div>
-      </div>
-
-      <h1>Dépannage plomberie<br>rapide, propre et professionnel</h1>
-
-      <p>
-        Fuite d’eau, débouchage, WC bouché, chauffe-eau, robinetterie :
-        nous intervenons rapidement pour vos urgences plomberie.
-      </p>
-
-      <div class="heroActions">
-        <a href="#demande" class="primaryBtn">⚡ Prendre rendez-vous</a>
-        <a href="tel:+33756833656" class="secondaryBtn">📞 07 56 83 36 56</a>
+      <div class="formCard">
+        <form id="smsForm">
+          <input type="text" name="nom" placeholder="Nom" required>
+          <input type="tel" name="tel" placeholder="Téléphone" required>
+          <input type="text" name="ville" placeholder="Ville" required>
+          <textarea name="message" placeholder="Problème"></textarea>
+          <button type="submit">Envoyer</button>
+        </form>
       </div>
     </div>
-  </header>
-
-  <section class="section" id="services">
-    <div class="container">
-      <div class="sectionTitle">
-        <h2>Nos services</h2>
-        <p>Des interventions rapides et efficaces pour tous vos problèmes de plomberie.</p>
-      </div>
-
-      <div class="servicesGrid">
-        <div class="card">
-          <div class="cardIcon">💧</div>
-          <h3>Recherche de fuite</h3>
-          <p>Détection et réparation rapide des fuites d’eau visibles ou cachées dans votre logement.</p>
-        </div>
-
-        <div class="card">
-          <div class="cardIcon">🚽</div>
-          <h3>Débouchage</h3>
-          <p>WC, évier, lavabo, douche ou canalisation bouchée : intervention rapide et propre.</p>
-        </div>
-
-        <div class="card">
-          <div class="cardIcon">🔥</div>
-          <h3>Chauffe-eau</h3>
-          <p>Diagnostic, dépannage et remplacement de chauffe-eau en cas de panne ou d’urgence.</p>
-        </div>
-
-        <div class="card">
-          <div class="cardIcon">🔧</div>
-          <h3>Robinetterie</h3>
-          <p>Réparation ou remplacement de robinets, mélangeurs, flexibles et équipements défectueux.</p>
-        </div>
-      </div>
-
-      <div class="trustBar">
-        <div class="trustItem">
-          <strong>24h/24</strong>
-          <span>Disponible jour et nuit</span>
-        </div>
-        <div class="trustItem">
-          <strong>7j/7</strong>
-          <span>Intervention rapide</span>
-        </div>
-        <div class="trustItem">
-          <strong>Urgences</strong>
-          <span>Fuite, WC, chauffe-eau</span>
-        </div>
-        <div class="trustItem">
-          <strong>Pro</strong>
-          <span>Travail sérieux et propre</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section sectionAlt" id="demande">
-    <div class="container">
-      <div class="sectionTitle">
-        <h2>Réserver une intervention rapide</h2>
-        <p>Remplissez le formulaire et envoyez votre demande directement par SMS.</p>
-      </div>
-
-      <div class="contactWrap">
-        <div class="contactInfo">
-          <h3>Une urgence plomberie ?</h3>
-          <p>
-            Nous répondons rapidement pour les urgences plomberie :
-            fuite d’eau, débouchage, chauffe-eau, WC bouché, robinetterie.
-          </p>
-
-          <ul>
-            <li>📞 Téléphone : 07 56 83 36 56</li>
-            <li>🕘 Disponibilité : 24h/24 - 7j/7</li>
-            <li>⚡ Demande rapide par SMS</li>
-            <li>✅ Intervention sérieuse et professionnelle</li>
-          </ul>
-        </div>
-
-        <div class="formCard">
-          <form id="smsForm">
-            <input type="text" name="nom" placeholder="Nom / Prénom" required>
-            <input type="tel" name="tel" placeholder="Téléphone" required>
-            <input type="text" name="ville" placeholder="Ville" required>
-            <textarea name="message" placeholder="Décrivez votre problème"></textarea>
-            <button type="submit">⚡ CONFIRMER MA DEMANDE</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="sectionTitle">
-        <h2>Questions fréquentes</h2>
-        <p>Les réponses rapides aux questions les plus courantes.</p>
-      </div>
-
-      <div class="faqGrid">
-        <div class="faqItem">
-          <h3>Intervention urgente possible ?</h3>
-          <p>Oui, selon disponibilité, nous intervenons rapidement pour les urgences plomberie.</p>
-        </div>
-
-        <div class="faqItem">
-          <h3>Que faire en cas de fuite importante ?</h3>
-          <p>Coupez l’arrivée d’eau si possible puis appelez immédiatement.</p>
-        </div>
-
-        <div class="faqItem">
-          <h3>Travaillez-vous le soir et le week-end ?</h3>
-          <p>Oui, le service est pensé pour les urgences 24h/24 et 7j/7.</p>
-        </div>
-
-        <div class="faqItem">
-          <h3>Comment envoyer ma demande ?</h3>
-          <p>Via le formulaire du site, qui ouvre directement un SMS prêt à envoyer.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footerInner">
-      <div>
-        <strong>AlloPlombier2424</strong>
-        <p>Dépannage plomberie d’urgence • 24h/24 • 7j/7</p>
-      </div>
-
-      <div>
-        <strong>📞 07 56 83 36 56</strong>
-        <p>Intervention rapide et professionnelle</p>
-      </div>
-    </div>
-  </footer>
-
-  <div class="stickyCall">
-    <a href="tel:+33756833656">📞 APPELER MAINTENANT - 07 56 83 36 56</a>
   </div>
+</section>
 
-  <script>
-    const PHONE = "0756833656";
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="sectionTitle">
+      <h2>FAQ</h2>
+    </div>
 
-    document.getElementById("smsForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+    <div class="faqGrid">
+      <div class="faqItem">Intervention rapide possible</div>
+      <div class="faqItem">Disponible 24/7</div>
+    </div>
+  </div>
+</section>
 
-      const data = new FormData(this);
+<!-- FOOTER -->
+<footer>
+  <h3>AlloPlombier2424</h3>
+  <p>📞 07 56 83 36 56</p>
+</footer>
 
-      const msg = encodeURIComponent(
-        "Demande dépannage plomberie (AlloPlombier2424)\n" +
-        "Nom: " + data.get("nom") + "\n" +
-        "Tel: " + data.get("tel") + "\n" +
-        "Ville: " + data.get("ville") + "\n" +
-        "Message: " + data.get("message")
-      );
+<!-- BOUTON FIXE -->
+<div class="stickyCall">
+  <a href="tel:+33756833656">📞 APPELER MAINTENANT</a>
+</div>
 
-      window.location.href = "sms:" + PHONE + "?body=" + msg;
-    });
-  </script>
+<script>
+const PHONE = "0756833656";
+
+document.getElementById("smsForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const data = new FormData(this);
+
+  const msg = encodeURIComponent(
+    "Nom: " + data.get("nom") +
+    "\nTel: " + data.get("tel") +
+    "\nVille: " + data.get("ville") +
+    "\nMessage: " + data.get("message")
+  );
+
+  window.location.href = "sms:" + PHONE + "?body=" + msg;
+});
+</script>
 
 </body>
 </html>
